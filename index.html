@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>San Valentín</title>
+    <title>San Valentín - J&D</title>
     <style>
         body {
             font-family: 'Georgia', serif;
@@ -55,20 +55,38 @@
             font-size: 22px;
             font-style: italic;
         }
+        .gif-container {
+            margin-top: 20px;
+        }
+        .gif {
+            width: 350px;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+        }
+        .footer {
+            margin-top: 30px;
+            font-size: 18px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="heart-icon">❤️</div>
-        <h1>💖 ¡Feliz San Valentín, mi amor! 💖</h1>
+        <h1>💖 J&D - ¡Feliz San Valentín, mi amor! 💖</h1>
         <p>Desde el día en que te conocí, mi mundo brilla más. ¿Quieres ser mi San Valentín?</p>
         <button class="button" onclick="showLoveMessage()">Sí, para siempre 💕</button>
         <button class="button" onmouseover="moveButton(this)">No... pero sí 🥰</button>
         <p id="message" class="hidden">¡Sabía que dirías que sí! Mi corazón es tuyo por siempre. 💘</p>
+        <div id="gif-container" class="gif-container hidden">
+            <img src="https://media.giphy.com/media/l4pTdcifPZLpDjL1e/giphy.gif" alt="Romantic Gif" class="gif">
+        </div>
+        <div class="footer">J&D - 28/12/24</div>
     </div>
     <script>
         function showLoveMessage() {
             document.getElementById("message").classList.remove("hidden");
+            document.getElementById("gif-container").classList.remove("hidden");
         }
 
         function moveButton(button) {
